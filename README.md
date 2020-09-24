@@ -1,9 +1,7 @@
-# Entah mengapa gridnya menjadi seperti ini
+# Evanreygo Surendraveda/XI RPL 3/13
 
-![alt text](RV1.jpg)
-![alt text](RV2.jpg)
-![alt text](RV3.jpg)
-![alt text](RV4.jpg)
-![alt text](RV5.jpg)
-![alt text](RV6.jpg)
-![alt text](RV7.jpg)
+![alt text](RV8.jpg)
+![alt text](RV9.jpg)
+![alt text](RV10.jpg)
+![alt text](RV11.jpg)
+![alt text](RV12.jpg)
