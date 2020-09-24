@@ -28,6 +28,12 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
         return new ListViewHolder(view);
     }
 
+    private OnItemClickCallBack onItemClickCallBack;
+
+    public void setOnItemClickCallBack(OnItemClickCallBack onItemClickCallBack){
+        this.onItemClickCallBack = onItemClickCallBack;
+    }
+
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Hero hero = listHero.get(position);
@@ -38,6 +44,13 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
 
         holder.tvName.setText(hero.getName());
         holder.tvFrom.setText(hero.getFrom());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallBack.onItemClicked(listHero.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -55,5 +68,9 @@ public class ListHeroAdapter extends RecyclerView.Adapter<ListHeroAdapter.ListVi
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvFrom = itemView.findViewById((R.id.tv_item_from));
         }
+    }
+
+    public interface OnItemClickCallBack {
+        void onItemClicked(Hero data);
     }
 }
